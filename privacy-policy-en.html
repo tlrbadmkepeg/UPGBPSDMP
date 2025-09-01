@@ -1,83 +1,233 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Privacy Policy – UPG BPSDMP</title>
+  <title>Kebijakan Privasi / Privacy Policy – UPG BPSDMP</title>
+  <meta name="description" content="Kebijakan Privasi aplikasi UPG BPSDMP Kementerian Perdagangan. Penjelasan data yang dikumpulkan, tujuan, keamanan, retensi (hapus otomatis ≤ 90 hari), dan hak pengguna.">
   <style>
-    :root { --ink:#1f2937; --muted:#6b7280; --brand:#0b5bd3; }
-    body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
-         line-height:1.65;color:var(--ink);margin:0;padding:32px}
-    main{max-width:920px;margin:auto}
-    h1{color:var(--brand);margin:0 0 8px}
-    .meta{color:var(--muted);margin:0 0 24px}
+    :root { --ink:#0f172a; --muted:#64748b; --brand:#0b5bd3; --bg:#f8fafc; --line:#e5e7eb; }
+    *{box-sizing:border-box}
+    body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;margin:0;color:var(--ink);line-height:1.65;background:#fff}
+    header{background:var(--bg);border-bottom:1px solid var(--line);padding:20px}
+    header h1{margin:0 0 6px;color:var(--brand);font-size:1.5rem}
+    header p{margin:0;color:var(--muted)}
+    main{max-width:960px;margin:0 auto;padding:24px}
     h2{color:var(--brand);margin:28px 0 10px;font-size:1.15rem}
+    h3{margin:18px 0 8px;font-size:1rem}
     p{margin:10px 0}
     ul{margin:8px 0 16px 22px}
-    .card{background:#f8fafc;border:1px solid #e5e7eb;border-radius:12px;padding:16px}
-    footer{margin-top:28px;color:var(--muted);font-size:.9rem}
+    .card{background:var(--bg);border:1px solid var(--line);border-radius:12px;padding:16px;margin:14px 0}
+    .meta{color:var(--muted);font-size:.95rem}
+    .lang-switch{display:flex;gap:8px;margin:10px 0 0}
+    .lang-switch a{padding:6px 10px;border:1px solid var(--line);border-radius:8px;text-decoration:none;color:var(--ink)}
+    .lang-switch a.active{border-color:var(--brand);color:#fff;background:var(--brand)}
+    footer{border-top:1px solid var(--line);padding:16px 24px;color:var(--muted);font-size:.9rem}
+    .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+    .grid{display:grid;gap:14px}
+    @media (min-width:720px){ .grid{grid-template-columns:1fr 1fr} }
+    a{color:var(--brand)}
   </style>
+  <script>
+    // simple bilingual toggle (no external deps)
+    function setLang(lang){
+      document.documentElement.lang = lang;
+      document.getElementById('id').style.display = lang==='id'?'block':'none';
+      document.getElementById('en').style.display = lang==='en'?'block':'none';
+      document.getElementById('btn-id').classList.toggle('active', lang==='id');
+      document.getElementById('btn-en').classList.toggle('active', lang==='en');
+      try{ localStorage.setItem('pp_lang', lang); }catch(e){}
+    }
+    document.addEventListener('DOMContentLoaded', ()=>{
+      const saved = localStorage.getItem('pp_lang');
+      setLang(saved==='en'?'en':'id');
+    });
+  </script>
 </head>
 <body>
-<main>
-  <h1>Privacy Policy – UPG BPSDMP</h1>
-  <p class="meta">Official application of the Ministry of Trade, managed by the Human Resources Development Agency for Trade (BPSDMP).</p>
+  <header>
+    <h1>Kebijakan Privasi / Privacy Policy – UPG BPSDMP</h1>
+    <p class="meta">Aplikasi resmi Kementerian Perdagangan RI, dikelola oleh Badan Pengembangan Sumber Daya Manusia Perdagangan (BPSDMP).</p>
+    <nav class="lang-switch" aria-label="Language switch">
+      <a href="#!" id="btn-id" onclick="setLang('id')" class="active">Bahasa Indonesia</a>
+      <a href="#!" id="btn-en" onclick="setLang('en')">English</a>
+    </nav>
+  </header>
 
-  <div class="card">
-    <p><strong>App Owner:</strong> Ministry of Trade – BPSDMP</p>
-    </div>
+  <main>
+    <!-- ===================== INDONESIAN ===================== -->
+    <section id="id">
+      <div class="card">
+        <strong>Entitas Pengelola:</strong> Kementerian Perdagangan – BPSDMP (Unit Pengendali Gratifikasi/UPG)<br>
+        <strong>Aplikasi Pemerintah (Government App):</strong> Ya – tingkat <em>Pemerintah Pusat</em> (Kementerian).
+      </div>
 
-  <h2>1. Data Collected</h2>
-  <ul>
-    <li><strong>Identity Data:</strong> name, employee ID, unit, position.</li>
-    <li><strong>Contact:</strong> valid email and WhatsApp number.</li>
-    <li><strong>Reporting information:</strong> details of gratuities and supporting files.</li>
-    <li><strong>Technical data:</strong> device type, app version, and basic logs for reliability.</li>
-  </ul>
+      <p class="meta"><strong>Tanggal berlaku/terakhir diperbarui:</strong> 1 September 2025</p>
 
-  <h2>2. Purpose of Processing</h2>
-  <ul>
-    <li>Verification and validation of gratuity reporting.</li>
-    <li>Follow-up monitoring by the Gratuity Control Unit (UPG).</li>
-    <li>Improving service, security, and application reliability.</li>
-  </ul>
+      <h2>1. Jenis Data yang Dikumpulkan</h2>
+      <p>Aplikasi dapat mengumpulkan data yang diisikan pengguna melalui formulir (mis. Jotform) untuk kebutuhan pelaporan:</p>
+      <ul>
+        <li><strong>Identitas:</strong> nama lengkap, NIP/NIK, unit, jabatan, tanggal lahir.</li>
+        <li><strong>Kontak:</strong> email, nomor WhatsApp/telepon.</li>
+        <li><strong>Informasi pelaporan:</strong> rincian penerimaan gratifikasi dan berkas pendukung yang diunggah.</li>
+        <li><strong>Data teknis dasar:</strong> tipe perangkat, versi aplikasi, serta log dasar untuk keandalan layanan.</li>
+      </ul>
 
-  <h2>3. Legal Basis</h2>
-  <p>Data processing is conducted in compliance with Indonesian regulations and the official duties of government institutions.</p>
+      <h2>2. Tujuan Pemrosesan</h2>
+      <ul>
+        <li>Verifikasi dan validasi pelaporan gratifikasi.</li>
+        <li>Tindak lanjut pemrosesan oleh UPG.</li>
+        <li>Peningkatan mutu layanan, keamanan, dan keandalan aplikasi.</li>
+      </ul>
 
-  <h2>4. Storage & Security</h2>
-  <ul>
-    <li>Data is stored on systems designated by the Ministry of Trade.</li>
-    <li>Access is restricted to authorized personnel with authentication control.</li>
-    <li>Data transmission is protected with HTTPS/TLS encryption.</li>
-  </ul>
+      <h2>3. Dasar Hukum</h2>
+      <p>Pemrosesan data dilakukan dalam rangka pelaksanaan tugas dan fungsi resmi instansi pemerintah, sesuai peraturan perundang-undangan yang berlaku (termasuk prinsip UU Perlindungan Data Pribadi).</p>
 
-  <h2>5. Data Sharing</h2>
-  <p>No personal data is sold or traded. Data may only be shared with authorities if required by law.</p>
+      <h2>4. Penyimpanan & Keamanan</h2>
+      <ul>
+        <li>Data disimpan pada sistem yang ditetapkan Kementerian Perdagangan dan/atau layanan formulir yang ditunjuk (mis. Jotform).</li>
+        <li>Akses terbatas kepada petugas berwenang dengan kontrol autentikasi.</li>
+        <li>Transmisi data dilindungi enkripsi <strong>HTTPS/TLS</strong>.</li>
+      </ul>
 
-  <h2>6. User Rights</h2>
-  <ul>
-    <li>Request correction of inaccurate data.</li>
-    <li>Request information on data processing.</li>
-    <li>Submit inquiries/objections via official contact.</li>
-  </ul>
+      <h2>5. Berbagi Data</h2>
+      <p>Kami <strong>tidak menjual</strong> atau memperdagangkan data pribadi. Data hanya dapat dibagikan kepada otoritas berwenang apabila diwajibkan oleh peraturan perundang-undangan.</p>
 
-  <h2>7. Retention & Deletion</h2>
-  <p>Data is retained as long as needed for reporting purposes and archiving obligations, with deletion or anonymization following government policy.</p>
+      <h2>6. Pihak Ketiga & Periklanan</h2>
+      <ul>
+        <li>Aplikasi <strong>tidak menayangkan iklan</strong> dan <strong>tidak menggunakan analytics komersial</strong> untuk pelacakan.</li>
+        <li>Jika menggunakan layanan pihak ketiga (mis. Jotform untuk pengumpulan formulir), layanan tersebut memproses data sesuai ketentuan dan kebijakan mereka masing-masing.</li>
+      </ul>
 
-  <h2>8. Children</h2>
-  <p>This app is not intended for children under 18.</p>
+      <h2>7. Izin Aplikasi (Permissions)</h2>
+      <ul>
+        <li><strong>Internet</strong>: untuk mengirim/menarik data pelaporan dan konten informasi.</li>
+        <li><strong>Penyimpanan/Kamera</strong> (jika diaktifkan pengguna): hanya untuk unggah dokumen/foto pendukung pelaporan.</li>
+      </ul>
 
-  <h2>9. Policy Updates</h2>
-  <p>We may update this policy periodically. Changes will be announced via the app or this page.</p>
+      <h2>8. Retensi & Penghapusan</h2>
+      <ul>
+        <li>Data formulir dapat <strong>dihapus otomatis ≤ 90 hari</strong> apabila fitur <em>auto-delete submissions</em> diaktifkan pada layanan formulir.</li>
+        <li>Jika diperlukan oleh kewajiban kearsipan pemerintah, data dapat disimpan lebih lama sesuai ketentuan arsip yang berlaku atau dianonimkan.</li>
+      </ul>
 
-  <h2>10. Contact</h2>
-  <p>Unit Pengendali Gratifikasi (UPG) – BPSDMP Ministry of Trade<br>
-     Email: <a href="mailto:upgbpsdmp@kemendag.go.id">upgbpsdmp@kemendag.go.id</a>
-  </p>
+      <h2>9. Hak Pengguna</h2>
+      <ul>
+        <li>Meminta perbaikan data yang tidak akurat.</li>
+        <li>Meminta informasi terkait pemrosesan data.</li>
+        <li>Meminta penghapusan data (apabila tidak bertentangan dengan kewajiban kearsipan/ketentuan hukum).</li>
+      </ul>
 
-  <footer>© Ministry of Trade – BPSDMP. All rights reserved.</footer>
-</main>
+      <div class="card">
+        <h3>Permintaan Penghapusan Data</h3>
+        <p>Anda dapat mengajukan permintaan penghapusan data dengan menghubungi kami melalui email resmi UPG BPSDMP. Jika <em>auto-delete</em> di layanan formulir telah diaktifkan, data yang dikumpulkan akan terhapus otomatis dalam jangka waktu maksimal 90 hari.</p>
+      </div>
+
+      <h2>10. Anak-Anak</h2>
+      <p>Aplikasi ini <strong>tidak ditujukan</strong> bagi anak-anak di bawah 18 tahun.</p>
+
+      <h2>11. Sinkronisasi dengan Data Safety (Google Play)</h2>
+      <p>Informasi pada formulir <em>Data Safety</em> Google Play (mis. jenis data, tujuan, retensi, berbagi data) telah diselaraskan dengan kebijakan ini.</p>
+
+      <h2>12. Perubahan Kebijakan</h2>
+      <p>Kebijakan ini dapat diperbarui secara berkala. Perubahan akan diumumkan melalui aplikasi atau halaman ini.</p>
+
+      <h2>13. Kontak</h2>
+      <p>
+        Unit Pengendali Gratifikasi (UPG) – BPSDMP Kementerian Perdagangan RI<br>
+        Email: <a href="mailto:upgbpsdmp@kemendag.go.id">upgbpsdmp@kemendag.go.id</a><br>
+        Situs: <a href="https://bpsdmp.kemendag.go.id/" target="_blank" rel="noopener">bpsdmp.kemendag.go.id</a>
+      </p>
+    </section>
+
+    <!-- ===================== ENGLISH ===================== -->
+    <section id="en" style="display:none">
+      <div class="card">
+        <strong>Controller:</strong> Ministry of Trade – BPSDMP (Gratuity Control Unit/UPG)<br>
+        <strong>Government App:</strong> Yes – <em>National government</em> level (Ministry).
+      </div>
+
+      <p class="meta"><strong>Effective/last updated:</strong> 1 September 2025</p>
+
+      <h2>1. Data Collected</h2>
+      <p>The app may collect information entered by users via forms (e.g., Jotform) for reporting purposes:</p>
+      <ul>
+        <li><strong>Identity:</strong> full name, employee/citizen ID, unit, position, date of birth.</li>
+        <li><strong>Contact:</strong> email address, WhatsApp/phone number.</li>
+        <li><strong>Reporting details:</strong> gratuity information and any uploaded supporting files.</li>
+        <li><strong>Basic technical data:</strong> device type, app version, and basic logs for service reliability.</li>
+      </ul>
+
+      <h2>2. Purposes of Processing</h2>
+      <ul>
+        <li>Verification and validation of gratuity reports.</li>
+        <li>Follow-up handling by the UPG team.</li>
+        <li>Improving service quality, security, and app reliability.</li>
+      </ul>
+
+      <h2>3. Legal Basis</h2>
+      <p>Processing is carried out in performing official duties of a government institution, in accordance with applicable Indonesian regulations (including the principles of the Personal Data Protection Law).</p>
+
+      <h2>4. Storage & Security</h2>
+      <ul>
+        <li>Data is stored on systems designated by the Ministry of Trade and/or the appointed form service (e.g., Jotform).</li>
+        <li>Access is restricted to authorized personnel with authentication controls.</li>
+        <li>Data in transit is protected by <strong>HTTPS/TLS</strong> encryption.</li>
+      </ul>
+
+      <h2>5. Data Sharing</h2>
+      <p>We <strong>do not sell</strong> personal data. Data may be shared with competent authorities only when required by law.</p>
+
+      <h2>6. Third Parties & Advertising</h2>
+      <ul>
+        <li>The app <strong>does not display ads</strong> and <strong>does not use commercial analytics</strong> for tracking.</li>
+        <li>Where third-party services are used (e.g., Jotform for form collection), those services process data under their own terms and policies.</li>
+      </ul>
+
+      <h2>7. App Permissions</h2>
+      <ul>
+        <li><strong>Internet</strong>: to submit/retrieve report data and informational content.</li>
+        <li><strong>Storage/Camera</strong> (if enabled by the user): strictly for uploading supporting documents/photos.</li>
+      </ul>
+
+      <h2>8. Retention & Deletion</h2>
+      <ul>
+        <li>Form submissions can be <strong>auto-deleted within ≤ 90 days</strong> when the form service’s auto-delete feature is enabled.</li>
+        <li>Where required by public-records/archival obligations, data may be retained longer in accordance with applicable rules or anonymized.</li>
+      </ul>
+
+      <h2>9. User Rights</h2>
+      <ul>
+        <li>Request rectification of inaccurate data.</li>
+        <li>Request information on processing activities.</li>
+        <li>Request deletion (where not in conflict with archival/legal obligations).</li>
+      </ul>
+
+      <div class="card">
+        <h3>Data Deletion Requests</h3>
+        <p>You may submit a deletion request via the official UPG BPSDMP email. If the form service’s auto-delete is enabled, collected data will be automatically deleted within a maximum of 90 days.</p>
+      </div>
+
+      <h2>10. Children</h2>
+      <p>This app is <strong>not intended</strong> for children under 18.</p>
+
+      <h2>11. Alignment with Google Play Data Safety</h2>
+      <p>The information declared in Google Play’s Data Safety form (e.g., data types, purposes, retention, sharing) is aligned with this policy.</p>
+
+      <h2>12. Policy Updates</h2>
+      <p>We may update this policy from time to time. Changes will be announced through the app or this page.</p>
+
+      <h2>13. Contact</h2>
+      <p>
+        Gratuity Control Unit (UPG) – BPSDMP, Ministry of Trade (Indonesia)<br>
+        Email: <a href="mailto:upgbpsdmp@kemendag.go.id">upgbpsdmp@kemendag.go.id</a><br>
+        Website: <a href="https://bpsdmp.kemendag.go.id/" target="_blank" rel="noopener">bpsdmp.kemendag.go.id</a>
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    © Kementerian Perdagangan – BPSDMP. Seluruh hak cipta dilindungi. • This is an official government application policy page.
+  </footer>
 </body>
 </html>
-
